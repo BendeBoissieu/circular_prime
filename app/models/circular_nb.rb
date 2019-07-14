@@ -1,3 +1,3 @@
 class CircularNb < ApplicationRecord
-  validates :value, numericality: true, :presence => true
+  validates :value, numericality: { only_integer: true }, :presence => true
 end
