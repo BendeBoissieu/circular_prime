@@ -1,0 +1,6 @@
+<%= simple_form_for  @circularNb, url: circular_prime_index_path do |f| %>
+  <div class="container-form">
+      <%= f.input :value,input_html: {class: "input-form"} %>
+      <div class="text-center space-top"> <%= f.button :submit, class: 'btn btn-validate' %> </div>
+  </div>
+<% end %>
