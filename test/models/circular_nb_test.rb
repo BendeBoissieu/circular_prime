@@ -17,9 +17,9 @@ class CircularNbTest < ActiveSupport::TestCase
       assert !nb_to_analyze.save
   end
 
-    test "the results should be circular prime" do
-      nb_to_analyze = CircularNb.create(value: 100)
-      expect(nb_to_analyze.results).to eq ([97, 79, 73, 71, 37, 31, 17, 13, 11, 7, 5, 3, 2])
+    test "the value should be positive" do
+      nb_to_analyze = CircularNb.create(value: -4)
+      assert !nb_to_analyze.save
     end
 end
 
