@@ -1,5 +1,11 @@
-<h1>CircularPrime#show</h1>
-<p>Find me in app/views/circular_prime/show.html.erb</p>
+<div class="container">
+  <div class="text-center">
+    <h1>Circular Prime</h1>
+    <p>List of all the circlar prime numbers under <%= @circularNb.value %></p>
+    <% (0..@circularNb.results.count).each { |i| %>
+    <p><%= @circularNb.results[i]  %></p>
+    <% } %>
 
-<%= @circularNb.value  %>
-<%= @circularNb.results  %>
+  </div>
+</div>
+
