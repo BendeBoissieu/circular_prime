@@ -1,11 +1,25 @@
-<div class="container">
-  <div class="text-center">
-    <h1>Circular Prime</h1>
-    <p>List of all the circlar prime numbers under <%= @circularNb.value %></p>
-    <% (0..@circularNb.results.count).each { |i| %>
-    <p><%= @circularNb.results[i]  %></p>
-    <% } %>
-
+<div class="table-card">
+  <div class="card-container">
+    <h1 class="table-title">Circular Prime</h1>
+    <div class="table-wrap-outter">
+      <hr class="top-ln">
+      <div class="table-wrap">
+        <table class="table">
+          <thead class="thead" title="Click to sort">
+            <tr class="row">
+              <th class="col-head" scope="col">Numbers under <%= @circularNb.value %></th>
+            </tr>
+          </thead>
+          <tbody class="tbody">
+            <% (0..@circularNb.results.count).each { |i| %>
+              <tr class="row">
+                <td class="cell"><%= @circularNb.results[i]  %></td>
+              </tr>
+            <% } %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <hr class="btm-ln">
   </div>
 </div>
-
