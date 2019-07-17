@@ -1,0 +1,280 @@
+/* CSS Reset */
+
+html,
+body,
+div,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+em,
+img,
+ins,
+kbd,
+q,
+small,
+strong,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section {
+  display: block;
+}
+
+table {
+  table-layout: fixed;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* End CSS Reset */
+
+html {
+  font: 100% sans-serif;
+}
+
+body {
+  background: #f2f2f2;
+  font: 100%/1.2 Roboto, sans-serif;
+}
+
+.table-card {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.23), 0 10px 40px rgba(0, 0, 0, 0.19);
+  margin: 15px auto 10px;
+  max-height: 85vh;
+  padding: 13px 10px 20px;
+  width: 85vw;
+}
+
+.card-container {
+  margin: 0 auto;
+  width: 90%;
+}
+
+.table-wrap-outter {
+  height: -moz-calc(80vh - 20px);
+  height: -webkit-calc(80vh - 20px);
+  height: calc(80vh - 20px);
+  overflow: auto;
+  margin: 0 auto;
+  scrollbar-face-color: #00447c; /* IE 6+ */
+  scrollbar-track-color: #80a2be; /* IE 6+ */
+  scrollbar-color: #00447c #80a2be; /* Firefox 64+ */
+  scrollbar-width: thin; /* Firefox 64+ */
+  scrollbar-width: 8px; /* Will be available in future FF versions, relies on above fallback until then */
+  width: 100%;
+}
+
+/* Custom scrollbar effect for webkit browsers (Chrome, Safari, Opera, future versions of Edge) */
+.table-wrap-outter::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.table-wrap-outter::-webkit-scrollbar-track {
+  background: padding-box #80a2be;
+  border-radius: 4px;
+}
+
+.table-wrap-outter::-webkit-scrollbar-thumb {
+  background: padding-box #00447c;
+  border-radius: 4px;
+}
+
+.table-wrap-outter::-webkit-scrollbar-thumb:hover {
+  background: #002849;
+}
+
+.table-wrap-outter::-webkit-scrollbar-thumb:active {
+  background: #000333;
+  box-shadow: inset 0 0 3px rgba(192, 192, 192, 0.5);
+}
+
+.table-title {
+  color: #00447c;
+  font: bold 2em Lato, sans-serif;
+  margin: 0;
+  text-transform: uppercase;
+  text-indent: 25px;
+  font-size: 25px;
+  text-align: center;
+}
+
+.table-wrap {
+  height: -moz-calc(85vh - 20px);
+  height: -webkit-calc(85vh - 20px);
+  height: calc(85vh - 20px);
+  margin: 0 auto;
+  width: 100%;
+}
+
+.table {
+  border: 2px solid #c0c0c0;
+  text-align: center;
+  width: 98%;
+  margin: 0 auto;
+}
+
+.thead,
+.tfoot {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.thead { font: 700 20px Lato, sans-serif; }
+
+.tbody,
+.tfoot {
+  font: 16px Roboto, sans-serif;
+  cursor: default;
+}
+
+.row:nth-child(even) {
+  background-color: #d3d3d3;
+}
+
+.tbody .row:hover {
+  background-color: #6495ed;
+  color: #fff;
+}
+
+.tfoot .row:hover {
+  background: #687685;
+  color: #fff;
+}
+
+.col-head,
+.cell,
+.col-foot {
+  padding: 8px;
+}
+
+.col-head {
+  background: #00447c;
+  border-color: #c0c0c0;
+  border-style: solid;
+  border-width: 2px 1px;
+  color: #f1f2f2;
+  cursor: pointer;
+  letter-spacing: 1px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: -0.5px;
+  z-index: 999;
+  width: 100%;
+}
+
+.col-head + .col-head,
+.cell + .cell,
+.col-foot + .col-foot {
+  border-left: 1px solid #c0c0c0;
+}
+
+.cell:hover {
+  font-weight: 700;
+}
+
+.col-foot {
+  background: #789;
+  border-top: 2px solid #c0c0c0;
+  position: -webkit-sticky;
+  position: sticky;
+  bottom: -.5px;
+  z-index: 99999;
+}
+
+.col-foot:hover {
+  color: #ffffe0;
+  font-weight: 700;
+}
+
+.top-ln,
+.btm-ln {
+  border-bottom: 0;
+  border-top: 1px solid #c0c0c0;
+  margin: 0 auto;
+  position: relative;
+  width: 97.2%;
+}
+
+.top-ln {
+  left: -4.5px;
+  top: 1px;
+}
+
+.btm-ln {
+  bottom: 0;
+  left: -5px;
+}
+
+.row{
+  margin: auto;
+}
