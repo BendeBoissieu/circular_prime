@@ -22,7 +22,10 @@ body {
   margin: 15px auto 10px;
   max-height: 85vh;
   padding: 13px 10px 20px;
-  width: 85vw;
+  width: 40vw;
+  @media screen and (max-width: 600px) {
+    width: 80vw;
+  }
 }
 
 .card-container {
@@ -74,7 +77,6 @@ body {
   font: bold 2em Lato, sans-serif;
   margin: 0;
   text-transform: uppercase;
-  text-indent: 25px;
   font-size: 25px;
   text-align: center;
   margin: 15px;
@@ -129,6 +131,7 @@ body {
 .cell,
 .col-foot {
   padding: 8px;
+  margin: 0 auto;
 }
 
 .col-head {
@@ -144,6 +147,7 @@ body {
   top: -0.5px;
   z-index: 999;
   width: 100%;
+  margin: 0 auto;
 }
 
 .col-head + .col-head,
