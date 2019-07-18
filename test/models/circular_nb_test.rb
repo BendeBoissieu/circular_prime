@@ -21,5 +21,6 @@ class CircularNbTest < ActiveSupport::TestCase
       nb_to_analyze = CircularNb.create(value: -4)
       assert !nb_to_analyze.save
     end
+
 end
 

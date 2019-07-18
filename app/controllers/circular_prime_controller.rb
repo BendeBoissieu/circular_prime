@@ -2,11 +2,6 @@ class CircularPrimeController < ApplicationController
 
   def index
     @circularNbs = CircularNb.all
-    respond_to do |format|
-      format.html
-      format.csv { send_data @circularNbs.to_csv }
-      format.xls
-    end
   end
 
   def new
@@ -15,7 +10,7 @@ class CircularPrimeController < ApplicationController
 
 
   def show
-    @circularNb = CircularNb.find(params[:id])
+    @circularNb = CircularNb.friendly.find(params[:id])
     @circularNb.value.downto(2){|i|
       @circularNb.results << i if circular_prime?(i) == true
     }
