@@ -23,4 +23,7 @@
     <hr class="btm-ln">
   </div>
 </div>
-<div class="bottom"><%= link_to "Back to home",  new_circular_prime_path, class: "btn-home" %></div>
+<div class="bottom">
+  <%= link_to "Back to home",  new_circular_prime_path, class: "btn-home" %>
+  <%= link_to "Export CSV", circular_prime_path(format: "csv"), class: "btn-home"  %>
+</div>

@@ -2,6 +2,11 @@ class CircularPrimeController < ApplicationController
 
   def index
     @circularNbs = CircularNb.all
+    respond_to do |format|
+      format.html
+      format.csv { send_data @circularNbs.to_csv }
+      format.xls
+    end
   end
 
   def new

@@ -31,9 +31,9 @@ body {
 }
 
 .table-wrap-outter {
-  height: -moz-calc(80vh - 20px);
-  height: -webkit-calc(80vh - 20px);
-  height: calc(80vh - 45px);
+  height: -moz-calc(80vh - 80px);
+  height: -webkit-calc(80vh - 80px);
+  height: calc(80vh - 80px);
   overflow: auto;
   margin: 0 auto;
   scrollbar-face-color: #00447c; /* IE 6+ */
@@ -81,8 +81,8 @@ body {
 }
 
 .table-wrap {
-  height: -moz-calc(85vh - 20px);
-  height: -webkit-calc(85vh - 20px);
+  height: -moz-calc(85vh - 80px);
+  height: -webkit-calc(85vh - 80px);
   height: calc(85vh - 20px);
   margin: 0 auto;
   width: 100%;
